@@ -1,5 +1,3 @@
-"use strict";
-
 let start = 0;
 let inc = 0.01;
 
