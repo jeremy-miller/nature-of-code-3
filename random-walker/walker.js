@@ -1,18 +1,16 @@
 class Walker {
   constructor(x, y) {
-    this.pos = createVector(x, y);
-    this.vel = createVector(1, 0);
+    this.x = width / 2;
+    this.y = height / 2;
   }
 
   step() {
-    this.pos.x = this.pos.x + this.vel.x;
-    this.pos.y = this.pos.y + this.vel.y;
+    this.x += random(-1, 1);
+    this.y += random(-1, 1);
   }
 
   draw() {
     stroke(255);
-    strokeWeight(2);
-    fill(255, 100);
-    ellipse(this.pos.x, this.pos.y, 32);
+    point(this.x, this.y);
   }
 }
