@@ -1,18 +1,15 @@
 class Walker {
-  constructor() {
-    this.x = width / 2;
-    this.y = height / 2;
+  constructor(x, y) {
+    this.pos = createVector(x, y);
   }
 
   step() {
-    const xStep = random(-1, 1);
-    const yStep = random(-1, 1);
-    this.x += xStep;
-    this.y += yStep;
+    this.pos.x = this.pos.x + random(-1, 1);
+    this.pos.y = this.pos.y + random(-1, 1);
   }
 
   draw() {
     stroke(255);
-    point(this.x, this.y);
+    point(this.pos.x, this.pos.y);
   }
 }
